@@ -11,6 +11,6 @@ This is server and client application. Server application is with the director o
 
 The application is build on Qt-creator which supports on multiple operating system.
 
-Wikipedia: http://en.wikipedia.org/wiki/Contract bridge
+Wikipedia: http://en.wikipedia.org/wiki/Contract_bridge
 
 Qt application and UI framework: http://qt-project.org/
