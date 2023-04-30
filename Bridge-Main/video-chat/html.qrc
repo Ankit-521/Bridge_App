@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>html/videoView.html</file>
+        <file>html/js/qwebchannel.js</file>
+        <file>html/js/client.js</file>
+        <file>html/test/index.html</file>
+        <file>html/test/script.js</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,46 @@
+import QtQuick 2.11
+import QtQuick.Controls 2.12
+import "./controls"
+import "./delegates"
+
+// RoomControl that contains all videos of players
+Item {
+    clip: true
+
+    ScrollView {
+        id: mainFlickable
+        width: parent.width
+        height: parent.height
+        // boundsBehavior: Flickable.StopAtBounds
+        contentHeight: flowWrapper.height //mainContentFlow.height
+        Item {
+            id: flowWrapper
+            width: parent.width
+            height: mainContentFlow.height
+
+            Flow {
+                id: mainContentFlow
+                width: parent.width
+                anchors.horizontalCenter: parent.horizontalCenter
+                spacing: 16
+                topPadding: 16
+                Repeater {
+                    model: 6
+                    delegate: Loader {
+                        sourceComponent: component
+                        asynchronous: true
+                    }
+                }
+            }
+        }
+    }
+    Component {
+        id: component
+        ContentItemDelegate {}
+    }
+
+    // Just to make it look more.....  :)
+    Divider {
+        anchors.bottom: parent.bottom
+    }
+}

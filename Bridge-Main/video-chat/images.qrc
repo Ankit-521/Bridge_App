@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/bridge-club.png</file>
+    </qresource>
+</RCC>

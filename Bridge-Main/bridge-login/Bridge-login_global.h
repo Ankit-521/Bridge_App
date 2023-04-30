@@ -1,0 +1,12 @@
+#ifndef BRIDGELOGIN_GLOBAL_H
+#define BRIDGELOGIN_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(AUTHMANAGER_LIBRARY)
+#define AUTHMANAGER_EXPORT Q_DECL_EXPORT
+#else
+#define AUTHMANAGER_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // BRIDGELOGIN_GLOBAL_H

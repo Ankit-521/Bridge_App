@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bridge video view</title>
+</head>
+
+<style type="text/css">
+body{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	box-sizing: border-box;
+	font-family: 'arial';
+	letter-spacing: 0px;
+}
+	video{
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(0,0,0,1);	
+	}
+
+
+</style>
+<body>
+	
+<video autoplay id="videoStream"></video>
+
+</body>
+	<!--script type="text/javascript" src="./js/qwebchannel.js"></script>
+<script type="text/javascript" src="./js/client.js"></script>
+<script type="text/javascript" src="https://qmlio/js/me.js"></script-->
+
+<script type="text/javascript">
+let pc;
+const configuration = {
+  iceServers: [{
+    urls: 'stun:stun.l.google.com:19302'
+  }]
+};
+ pc = new RTCPeerConnection(configuration);
+
+
+
+  // 'onicecandidate' notifies us whenever an ICE agent needs to deliver a
+  // message to the other peer through the signaling server
+  pc.onicecandidate = event => {
+     console.log("is iced")
+ 
+    if (event.candidate) {
+console.log("an ice is received")
+      //sendMessage({'candidate': event.candidate});
+    }
+  };
+	const connect= async (isOfferer)=> {
+
+  console.log("stating webrct")
+ 
+
+
+  // If user is offerer let the 'negotiationneeded' event create the offer
+ // if (isOfferer) {
+   //    console.log("is offered")
+    pc.onnegotiationneeded = () => {
+         console.log("negotiationneeded is now needed")
+      pc.createOffer().then(localDescCreated).catch(onError);
+    }
+ // }
+
+  // When a remote stream arrives display it in the #remoteVideo element
+  pc.onaddstream = event => {
+       console.log("new sreamas")
+   // remoteVideo.srcObject = event.stream;
+  };
+
+let stream;
+try{
+ stream= await navigator.mediaDevices.getUserMedia({
+    audio: true,
+    video: true,
+  })
+ document.querySelectorAll("#videoStream").srcObject = stream;
+    // Add your stream to be sent to the conneting peer
+    pc.addStream(stream);
+}catch(e){
+onError(e)
+}
+  
+
+}
+
+function localDescCreated(desc) {
+  pc.setLocalDescription(
+    desc,
+    () => sendMessage({'sdp': pc.localDescription}),
+    onError
+  );
+}
+
+const sendMessage= (msg)=>{
+	console.log("sending ,sf "+msg)
+}
+
+const onError = (e)=>{
+	console.log("my error is "+e)
+}
+
+setTimeout(connect,2000)	
+
+</script>
+</html>

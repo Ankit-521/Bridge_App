@@ -1,0 +1,2 @@
+RESOURCES += \
+    $$PWD/assets.qrc

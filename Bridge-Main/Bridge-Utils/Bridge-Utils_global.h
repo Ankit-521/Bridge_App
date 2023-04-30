@@ -1,0 +1,12 @@
+#ifndef BRIDGEUTILS_GLOBAL_H
+#define BRIDGEUTILS_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(BRIDGEUTILS_LIBRARY)
+#  define BRIDGEUTILS_EXPORT Q_DECL_EXPORT
+#else
+#  define BRIDGEUTILS_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // BRIDGEUTILS_GLOBAL_H

@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/Desktop.qml</file>
+        <file>qml/headers/MainPageHeader.qml</file>
+        <file>qml/controls/Divider.qml</file>
+        <file>qml/components/PlayerComponent.qml</file>
+        <file>qml/MainPageDrawer.qml</file>
+        <file>qml/controls/IconButton.qml</file>
+        <file>qml/components/MouseItem.qml</file>
+        <file>qml/controls/BigHeader.qml</file>
+        <file>qml/components/PlayerDetails.qml</file>
+        <file>qml/pages/ContentPage.qml</file>
+        <file>qml/pages/RoomPage.qml</file>
+        <file>qml/pages/MatchCreatorPage.qml</file>
+        <file>qml/sections/DrawerContainer.qml</file>
+        <file>qml/headers/SearchBar.qml</file>
+    </qresource>
+</RCC>

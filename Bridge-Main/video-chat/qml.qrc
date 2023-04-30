@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>qml/controls/Divider.qml</file>
+        <file>qml/headers/ListHeaderItem.qml</file>
+        <file>qml/delegates/ListDelegateItem.qml</file>
+        <file>qml/mainpromptDialog.qml</file>
+        <file>main.qml</file>
+        <file>qml/delegates/VideoViewDelegate.qml</file>
+        <file>qml/delegates/MainVideoDelegate.qml</file>
+        <file>qml/headers/MainPageHeader.qml</file>
+        <file>qml/TableContent.qml</file>
+        <file>qml/delegates/VideoView.qml</file>
+        <file>qml/ErrorMessageItem.qml</file>
+        <file>qml/MainWebEngineView.qml</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/Desktop.qml</file>
+        <file>qml/components/SplashScreen.qml</file>
+        <file>qml/LoginPage.qml</file>
+        <file>qml/footers/LoginPageFooter.qml</file>
+        <file>qml/controls/Divider.qml</file>
+        <file>qml/controls/AppButton.qml</file>
+        <file>qml/controls/Link.qml</file>
+        <file>qml/sections/LoginContetSection.qml</file>
+        <file>qml/sections/LoginBusySection.qml</file>
+        <file>qml/controls/PromptDialog.qml</file>
+    </qresource>
+</RCC>

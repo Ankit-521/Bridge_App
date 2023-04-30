@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/">
+        <file>common_assets/images/bridge-icon.png</file>
+        <file>common_assets/fonts/HindVadodara-Light.ttf</file>
+        <file>common_assets/fonts/HindVadodara-Medium.ttf</file>
+        <file>common_assets/fonts/HindVadodara-Regular.ttf</file>
+        <file>common_assets/qml/constants/Constants.qml</file>
+        <file>common_assets/qml/constants/qmldir</file>
+        <file>common_assets/images/copyright.png</file>
+        <file>common_assets/images/google.png</file>
+        <file>common_assets/images/logo.jpg</file>
+        <file>common_assets/images/close.png</file>
+        <file>common_assets/images/check.png</file>
+        <file>common_assets/json/google.json.json</file>
+        <file>common_assets/images/menu.png</file>
+        <file>common_assets/images/menu_white.png</file>
+        <file>common_assets/images/account.png</file>
+        <file>common_assets/images/account_dark.png</file>
+        <file>common_assets/qml/constants/GoogleIcons.qml</file>
+        <file>common_assets/fonts/materialdesignicons-webfont.ttf</file>
+    </qresource>
+</RCC>

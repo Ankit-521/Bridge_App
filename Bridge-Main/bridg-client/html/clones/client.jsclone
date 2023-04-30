@@ -1,0 +1,50 @@
+//var javascriptEngine;
+const connect=()=>{
+new QWebChannel(qt.webChannelTransport,(channel)=>{
+	console.log("im runninf " +qt)
+	var webObj=channel.objects.javascriptEngine;
+	window.javascriptEngine=webObj;
+	qtInitialisingDone();
+})	
+}
+
+console.log("my qt is  "+qt);
+
+const qtInitialisingDone=()=>{
+console.log("mu ks s ----- "+javascriptEngine)
+	javascriptEngine.callMeFromJs(1000);
+
+}
+
+document.querySelector('#l').addEventListener('click',(ev)=> {
+	console.log("my qt is  "+qt)
+	connect()
+	})
+
+
+const callFromCpp=()=>{
+	console.log("is me in valiss in js "+data)
+	return 3;
+}
+/*
+
+const requestCamera = async ()=>{
+	try{
+		console.log('is laodedd  ');
+		const stream = await navigator.mediaDevices.getUserMedia({
+			video:true,
+			audio:true
+		});
+
+		console.log('My trakc s  '+stream.getTracks());
+		for(const tracks of stream.getTracks());
+
+		document.querySelector('#videoStream').srcObject = stream;
+	}
+	catch(e){
+		console.log('my error is --------------  '+e);
+	}}
+requestCamera();
+
+
+*/
